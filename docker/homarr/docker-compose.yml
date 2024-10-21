@@ -11,8 +11,8 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Optional, only if you want docker integration
-      - $PATH/configs:/app/data/configs
-      - $PATH/icons:/app/public/icons
-      - $PATH/data:/data
+      - $USERDIR/configs:/app/data/configs
+      - $USERDIR/icons:/app/public/icons
+      - $USERDIR/data:/data
     ports:
       - '7575:7575'
